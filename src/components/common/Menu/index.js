@@ -1,16 +1,14 @@
-import React from "react";
-import { menuItemsData } from "./data";
+import React, { forwardRef } from "react";
+
 import MenuItem from "./MenuItem";
 import "./styles.css";
 
-function Menu() {
-  return (
-    <main>
-      {menuItemsData.map((item) => (
-        <MenuItem key={item.id} item={item} />
-      ))}
-    </main>
-  );
-}
+const Menu = forwardRef(({ list }, ref) => (
+  <main ref={ref}>
+    {list.map((item) => (
+      <MenuItem key={item.id} item={item} />
+    ))}
+  </main>
+));
 
 export default Menu;

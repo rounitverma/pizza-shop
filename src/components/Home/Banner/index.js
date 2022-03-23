@@ -3,7 +3,7 @@ import "./styles.css";
 import bannerImg from "./banner_1.png";
 import Logo from "../../common/Logo";
 
-function Banner() {
+function Banner({ handleScrollMenu }) {
   return (
     <header>
       <div className="header-content">
@@ -11,7 +11,7 @@ function Banner() {
         <div className="content-main">
           <h1>Delicious pizzas for your cravings</h1>
           <p>We make fresh and tasty pizzas for you and your loved ones.</p>
-          <button>
+          <button onClick={handleScrollMenu}>
             View Menu <i className="fas fa-long-arrow-alt-right"></i>
           </button>
         </div>

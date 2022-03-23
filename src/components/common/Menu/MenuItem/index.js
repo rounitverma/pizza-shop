@@ -1,5 +1,8 @@
 import React from "react";
+import StarRatings from "react-star-ratings";
 import { connect } from "react-redux";
+import vegImg from "./veg.png";
+import nonVegImg from "./non-veg.png";
 import { createStructuredSelector } from "reselect";
 import {
   cartAddItem,
@@ -19,7 +22,8 @@ const MenuItem = ({
   cartAddItem,
   cartRemoveItem,
 }) => {
-  const { id, name, description, price, img_url } = item;
+  const { id, name, description, price, img_url, isVeg, rating } = item;
+  var Rating = require("react-star-rating-lite");
 
   const handleItemQuantity = () => {
     let quantity = 0;
@@ -39,6 +43,14 @@ const MenuItem = ({
       <img src={img_url} alt="item" />
       <div className="item-head_desc">
         <p className="head_desc-name">{name}</p>
+        <div className="food-type">
+          {isVeg ? (
+            <img src={vegImg} alt="Veg" />
+          ) : (
+            <img src={nonVegImg} alt="Non-Veg" />
+          )}
+        </div>
+        <StarRatings rating={rating} starDimension="12px" starSpacing="5px" />
         <p className="head_desc-info">
           <small>{description}</small>
         </p>

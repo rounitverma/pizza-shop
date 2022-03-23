@@ -49,3 +49,10 @@
 .foot_desc-price {
   font-weight: 700;
 }
+
+.food-type img {
+  margin-top: 0rem;
+  height: 25px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}

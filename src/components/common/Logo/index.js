@@ -8,12 +8,12 @@ function Logo() {
       <div>
         <img src={logoImg} alt="" />
         <span>
-          <b>Taste</b>
+          <b>Firehouse</b>
         </span>
       </div>
 
       <p>
-        <b>Restaurant & BBQ</b>
+        <b>Seek the unique</b>
       </p>
     </div>
   );
